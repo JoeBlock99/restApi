@@ -6,7 +6,7 @@ from event.models import Event
 from baby.serializers import BabySerializer
 from event.serializers import EventSerializer
 from guardian.shortcuts import assign_perm
-from authorization.services import APIPermissionClassFactory
+from authorization.services import APIAuthorizationClassFactory
 # Create your views here.
 
 
@@ -18,7 +18,7 @@ class BabyViewSet(viewsets.ModelViewSet):
     queryset = Baby.objects.all()
     serializer_class = BabySerializer
     permission_classes = (
-        APIPermissionClassFactory(
+        APIAuthorizationClassFactory(
             name='BabyPermission',
             permission_configuration={
                 'base': {
