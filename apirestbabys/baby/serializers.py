@@ -5,7 +5,7 @@ from parent.serializers import ParentSerializer
 
 
 class BabySerializer(serializers.ModelSerializer):
-    events = serializer.StringRelatedField(many=True)
+    events = serializers.StringRelatedField(many=True)
 
 
     class Meta:

@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import datetime 
+import datetime 
 
 class Event(models.Model):
     head = models.CharField(max_length=50, null=True, blank=False)
